@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/screens/tela_perfil.dart';
-
-void main() {
-  runApp(const MyApp());
-}
+import 'screens/tela_perfil.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +9,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Desafio UI',
-      home: const TelaPerfil(),
+
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+
+      initialRoute: '/perfil',
+
+      routes: {
+        '/perfil': (context) => const TelaPerfil(),
+      },
     );
   }
 }
