@@ -13,10 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
 
-  final List<Widget> screens = const [
-    TelaProduto(),
-    TelaPerfil()
-  ];
+  final List<Widget> screens = const [TelaPerfil(), TelaProduto()];
 
   void onTabTapped(int index) {
     setState(() {

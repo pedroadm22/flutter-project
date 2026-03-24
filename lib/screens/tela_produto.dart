@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/widgets/product_card.dart'
+import 'package:first_app/widgets/product_card.dart';
 
 class TelaProduto extends StatelessWidget {
   const TelaProduto({super.key});
@@ -10,10 +10,21 @@ class TelaProduto extends StatelessWidget {
       appBar: AppBar(title: const Text("Loja")),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
+        child: Row(
           children: [
-            Product()
-        ]  
+            ProductCard(
+              title: 'Notebook Gamer',
+              price: 2999.0,
+              imageUrl: 'assets/images/product_image_1.jpeg',
+            ),
+            ProductCard(
+              title: 'PC Gamer',
+              price: 5999.90, 
+              imageUrl: 'assets/images/pcgamer_image.jpeg',
+            )
+          ] 
+        )
+      )
     );
   }
 }
