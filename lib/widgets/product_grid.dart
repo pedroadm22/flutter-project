@@ -19,11 +19,11 @@ class ProductGrid extends StatelessWidget {
         return GridView.builder(
           padding: const EdgeInsets.all(16),
           itemCount: products.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: crossAxisCount,
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 250,
             mainAxisSpacing: 12,
             crossAxisSpacing: 12,
-            childAspectRatio: 0.7,
+            childAspectRatio: 0.9,
           ),
           itemBuilder: (context, index) {
             return ProductCard(product: products[index]);
