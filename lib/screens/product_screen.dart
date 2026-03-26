@@ -7,7 +7,12 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Produtos")),
+      appBar: AppBar(
+        title:
+          Image.asset(
+            "assets/images/logo_app_bar"
+          )
+      ),
       body: const ProductGrid(),
     );
   }
