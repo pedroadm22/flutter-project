@@ -28,6 +28,7 @@ class CustomBottomNav extends StatelessWidget {
         children: [
           _buildItem(Icons.home, "Home", 1),
           _buildItem(Icons.person, "Perfil", 0),
+          _buildItem(Icons.shopping_cart, "Cart", 2)
         ],
       ),
     );
