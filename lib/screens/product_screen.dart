@@ -13,12 +13,6 @@ class ProductScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            leading: SizedBox(
-              child: Image.asset(
-                'assets/images/logo_app_bar.png',
-                fit: BoxFit.cover,
-                ),
-            ),
             pinned: false,
           ),
 
