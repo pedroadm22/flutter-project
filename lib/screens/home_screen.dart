@@ -1,34 +1,45 @@
-import 'package:project_app_ecommerce_kachau/screens/product_screen.dart';
-import 'package:project_app_ecommerce_kachau/widgets/custom_bottom_navbar.dart';
 import 'package:flutter/material.dart';
-import 'tela_perfil.dart';
-import 'package:project_app_ecommerce_kachau/screens/test_screen.dart';
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import 'package:project_app_ecommerce_kachau/screens/product_screen.dart';
+import 'package:project_app_ecommerce_kachau/screens/cart_screen.dart';
+import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  int currentIndex = 0;
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
 
-  final List<Widget> screens = const [TelaPerfil(), ProductScreen(), TestsScreen()];
+  final cartController = CartController();
 
-  void onTabTapped(int index) {
-    setState(() {
-      currentIndex = index;
-    });
-  }
+  late final List<Widget> pages = [
+    ProductScreen(controller: cartController),
+    CartScreen(controller: cartController),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+      body: pages[_currentIndex],
 
-      bottomNavigationBar: CustomBottomNav(
-        currentIndex: currentIndex,
-        onTap: onTabTapped,
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() => _currentIndex = index);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: "Carrinho",
+          ),
+        ],
       ),
     );
   }

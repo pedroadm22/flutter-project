@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 import 'package:project_app_ecommerce_kachau/widgets/product_grid.dart';
 import 'package:project_app_ecommerce_kachau/data/product_repo.dart';
 
 class ProductScreen extends StatelessWidget {
-  const ProductScreen({super.key});
+  final CartController controller;
+  const ProductScreen({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class ProductScreen extends StatelessWidget {
             pinned: false,
           ),
 
-          ProductGrid(products: products),
+          ProductList(products: products, controller: controller,),
         ],
       ),
     );

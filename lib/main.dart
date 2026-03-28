@@ -1,18 +1,6 @@
 import 'package:project_app_ecommerce_kachau/screens/home_screen.dart';
+import 'package:project_app_ecommerce_kachau/app.dart';
 import 'package:flutter/material.dart';
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Desafio UI',
-      home: const HomeScreen(),
-    );
-  }
+  runApp(const App());
 }

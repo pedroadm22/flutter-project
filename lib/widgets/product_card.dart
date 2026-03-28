@@ -2,37 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:project_app_ecommerce_kachau/models/Product.dart';
 import 'package:project_app_ecommerce_kachau/widgets/product_image.dart';
 import 'package:project_app_ecommerce_kachau/widgets/product_info.dart';
+import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductListItem extends StatelessWidget {
   final Product product;
+  final CartController controller;
 
-  const ProductCard({super.key, required this.product});
-
+  const ProductListItem(
+      {super.key, required this.product, required this.controller}
+      );
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [
-          BoxShadow(
-            blurRadius: 6,
-            color: Colors.black12,
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ProductImage(imageUrl: product.imagePath),
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(12),
 
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: ProductInfo(
-              title: product.title,
-              price: product.price,
-            ),
+      child: Row(
+        children: [
+          Image.asset(
+            product.imagePath,
+            width: 100,
+            height: 100,
           ),
+
+          const SizedBox(width: 12,),
+          
+          Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ProductInfo(
+                      title: product.title,
+                      price: product.price),
+                  const SizedBox(height: 8,),
+                ],
+              )
+          )
         ],
       ),
     );
