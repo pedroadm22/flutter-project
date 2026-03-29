@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_app_ecommerce_kachau/models/Product.dart';
-import 'package:project_app_ecommerce_kachau/widgets/feature_product/product_info.dart';
+import 'package:project_app_ecommerce_kachau/features/product/data/Product.dart';
+import 'package:project_app_ecommerce_kachau/features/product/product_info.dart';
 import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 
 class ProductListItem extends StatelessWidget {

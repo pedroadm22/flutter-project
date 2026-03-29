@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
-import 'package:project_app_ecommerce_kachau/widgets/feature_product/product_list_layout.dart';
-import 'package:project_app_ecommerce_kachau/data/product_repo.dart';
+import 'package:project_app_ecommerce_kachau/features/product/product_list_layout.dart';
+import 'package:project_app_ecommerce_kachau/features/product/data/product_repo.dart';
 
 class ProductScreen extends StatelessWidget {
   final CartController controller;
@@ -23,7 +23,6 @@ class ProductScreen extends StatelessWidget {
             ),
             pinned: false,
           ),
-
           ProductList(products: products, controller: controller,),
         ],
       ),
