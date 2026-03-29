@@ -26,9 +26,9 @@ class CustomBottomNav extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildItem(Icons.home, "Home", 1),
-          _buildItem(Icons.person, "Perfil", 0),
-          _buildItem(Icons.shopping_cart, "Cart", 2)
+          _buildItem(Icons.home, "Home", 0),
+          _buildItem(Icons.person, "Minha conta", 2),
+          _buildItem(Icons.shopping_cart, "Cart", 1)
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_app_ecommerce_kachau/models/Product.dart';
 import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
-import 'package:project_app_ecommerce_kachau/widgets/product_card.dart';
+import 'package:project_app_ecommerce_kachau/widgets/feature_product/product_card.dart';
 
 class ProductList extends StatelessWidget {
   final List<Product> products;

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 
-class TelaPerfil extends StatelessWidget {
-  const TelaPerfil({super.key});
+class ProfilePage extends StatelessWidget {
+  final CartController controller;
+
+  const ProfilePage({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {

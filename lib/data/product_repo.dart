@@ -14,14 +14,14 @@ class ProductRepository {
     imagePath: 'assets/images/product_image_1.jpeg'
     ),
     Product(
-    title: 'Notebook Gamer',
-    price: 3999.90,
-    imagePath: 'assets/images/product_image_1.jpeg'
+      title: "PC Gamer",
+      price: 7599.90,
+      imagePath: 'assets/images/pcgamer_image.jpeg',
     ),
     Product(
-    title: 'Notebook Gamer',
-    price: 3999.90,
-    imagePath: 'assets/images/product_image_1.jpeg'
+        title: 'Notebook Gamer',
+        price: 3999.90,
+        imagePath: 'assets/images/product_image_1.jpeg'
     ),
     Product(
       title: "PC Gamer",
@@ -29,9 +29,29 @@ class ProductRepository {
       imagePath: 'assets/images/pcgamer_image.jpeg',
     ),
     Product(
+        title: 'Notebook Gamer',
+        price: 3999.90,
+        imagePath: 'assets/images/product_image_1.jpeg'
+    ),
+    Product(
       title: "PC Gamer",
       price: 7599.90,
       imagePath: 'assets/images/pcgamer_image.jpeg',
+    ),
+    Product(
+        title: 'Notebook Gamer',
+        price: 3999.90,
+        imagePath: 'assets/images/product_image_1.jpeg'
+    ),
+    Product(
+      title: "PC Gamer",
+      price: 7599.90,
+      imagePath: 'assets/images/pcgamer_image.jpeg',
+    ),
+    Product(
+        title: 'Notebook Gamer',
+        price: 3999.90,
+        imagePath: 'assets/images/product_image_1.jpeg'
     ),
   ];
 }
