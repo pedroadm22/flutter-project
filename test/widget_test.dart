@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:project_app_ecommerce_kachau/core/main.dart';
 import 'package:project_app_ecommerce_kachau/core/app.dart';
 
 void main() {
