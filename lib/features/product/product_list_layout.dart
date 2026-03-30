@@ -16,11 +16,9 @@ class ProductList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList(
-      delegate: SliverChildBuilderDelegate(
-            (context, index) {
-          return ProductListItem(
+      delegate: SliverChildBuilderDelegate((context, index) {
+          return ProductCard(
             product: products[index],
-            controller: controller,
           );
         },
         childCount: products.length,

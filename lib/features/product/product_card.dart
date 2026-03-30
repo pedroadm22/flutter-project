@@ -3,12 +3,11 @@ import 'package:project_app_ecommerce_kachau/features/product/data/Product.dart'
 import 'package:project_app_ecommerce_kachau/features/product/product_info.dart';
 import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 
-class ProductListItem extends StatelessWidget {
+class ProductCard extends StatelessWidget {
   final Product product;
-  final CartController controller;
 
-  const ProductListItem(
-      {super.key, required this.product, required this.controller}
+  const ProductCard(
+      {super.key, required this.product}
       );
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,9 @@ class ProductListItem extends StatelessWidget {
                     children: [
                       ProductInfo(
                           title: product.title,
-                          price: product.price),
+                          price: product.cardPrice,
+                          cardPrice: product.cashPrice,
+                      ),
                       const SizedBox(height: 8,),
                     ],
                   )

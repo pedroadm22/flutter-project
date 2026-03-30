@@ -23,7 +23,7 @@ class ProductScreen extends StatelessWidget {
             ),
             pinned: false,
           ),
-          ProductList(products: products, controller: controller,),
+          ProductList( products: products, controller: controller,),
         ],
       ),
     );

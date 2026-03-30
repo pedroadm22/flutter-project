@@ -19,9 +19,8 @@ class _HomePageState extends State<HomePage> {
 
   late final List<Widget> pages = [
     ProductScreen(controller: cartController),
-    CartScreen(controller: cartController),
+    CartScreen(),
     ProfilePage(controller: cartController)
-
   ];
 
   @override
