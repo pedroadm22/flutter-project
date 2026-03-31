@@ -6,13 +6,13 @@ import 'package:project_app_ecommerce_kachau/features/product/product_info.dart'
 class ProductCard extends StatelessWidget {
   final Product product;
   final CartListController controller;
- // final CartListController cartController;
+  // final CartListController cartController;
 
   const ProductCard({
     super.key,
     required this.product,
     required this.controller,
-  //  required this.cartController
+    //  required this.cartController
   });
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,10 @@ class ProductCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey[100]
+        ),
 
         child: Expanded(
           child: Row(
@@ -30,27 +34,25 @@ class ProductCard extends StatelessWidget {
 
               const SizedBox(width: 12),
 
-              Container(
-                child: Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ProductInfo(
-                        title: product.title,
-                        price: product.cardPrice,
-                        cardPrice: product.cashPrice,
-                      ),
-                
-                      const SizedBox(height: 8),
-                
-                      ElevatedButton(
-                        onPressed: () {
-                          controller.addProduct(product);
-                        },
-                        child: Text("Buy"),
-                      ),
-                    ],
-                  ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ProductInfo(
+                      title: product.title,
+                      price: product.cardPrice,
+                      cardPrice: product.cashPrice,
+                    ),
+
+                    const SizedBox(height: 8),
+
+                    ElevatedButton(
+                      onPressed: () {
+                        controller.addProduct(product);
+                      },
+                      child: Text("Comprar"),
+                    ),
+                  ],
                 ),
               ),
             ],
