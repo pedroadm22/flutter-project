@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_app_ecommerce_kachau/features/product/product_screen.dart';
-import 'package:project_app_ecommerce_kachau/features/profile/profile_page.dart';
-import 'package:project_app_ecommerce_kachau/features/cart/cart_screen.dart';
-import 'package:project_app_ecommerce_kachau/features/home/home_navbar.dart';
+import 'package:project_app_ecommerce_kachau/screens/product_screen.dart';
+import 'package:project_app_ecommerce_kachau/widgets/profile/profile_page.dart';
+import 'package:project_app_ecommerce_kachau/screens/cart_screen.dart';
+import 'package:project_app_ecommerce_kachau/widgets/home/home_navbar.dart';
 import 'package:project_app_ecommerce_kachau/controllers/cart_product_controller.dart';
 
 class HomePage extends StatefulWidget {

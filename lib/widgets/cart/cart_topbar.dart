@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widget_previews.dart';
-import 'package:project_app_ecommerce_kachau/features/product/product_card.dart';
-import 'package:project_app_ecommerce_kachau/features/product/product_image.dart';
+import 'package:project_app_ecommerce_kachau/widgets/product/product_card.dart';
+import 'package:project_app_ecommerce_kachau/widgets/product/product_image.dart';
 
 
 class CartTopBar extends StatelessWidget {

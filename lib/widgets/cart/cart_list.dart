@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_app_ecommerce_kachau/features/cart/cart_item.dart';
+import 'package:project_app_ecommerce_kachau/widgets/cart/cart_item.dart';
 import 'package:project_app_ecommerce_kachau/controllers/cart_product_controller.dart';
 
 class CartList extends StatelessWidget {

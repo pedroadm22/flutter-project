@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_app_ecommerce_kachau/features/product/data/Product.dart';
-import 'package:project_app_ecommerce_kachau/features/cart/data/cart_item_model.dart';
+import 'package:project_app_ecommerce_kachau/data/product/Product.dart';
+import 'package:project_app_ecommerce_kachau/data/cart/cart_item_model.dart';
 
 class CartListController extends ChangeNotifier {
   final List<CartItemModel> _items = [];
@@ -38,7 +38,6 @@ class CartListController extends ChangeNotifier {
     }
   }
 
-  // 🗑️ Remover item completamente
   void removeItem(Product product) {
     _items.removeWhere((item) => item.product == product);
     notifyListeners();

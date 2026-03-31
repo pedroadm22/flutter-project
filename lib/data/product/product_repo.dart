@@ -1,4 +1,4 @@
-import 'package:project_app_ecommerce_kachau/features/product/data/Product.dart';
+import 'package:project_app_ecommerce_kachau/data/product/Product.dart';
 
 class ProductRepository {
   static final List<Product> products = [

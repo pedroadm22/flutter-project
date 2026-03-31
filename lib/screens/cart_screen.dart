@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_app_ecommerce_kachau/controllers/cart_product_controller.dart';
-import 'package:project_app_ecommerce_kachau/features/cart/cart_list.dart';
-import 'package:project_app_ecommerce_kachau/features/cart/cart_summary.dart';
+import 'package:project_app_ecommerce_kachau/widgets/cart/cart_list.dart';
+import 'package:project_app_ecommerce_kachau/widgets/cart/cart_summary.dart';
 
 class CartScreen extends StatelessWidget {
   final CartListController controller;
