@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^8.0.2
   carousel_slider: ^5.1.2
   moeda_brasil: ^1.1.3
+  flex_color_scheme: ^8.4.0
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_app_ecommerce_kachau/widgets/custom_navbar.dart';
+import 'package:project_app_ecommerce_kachau/widgets/profile/custom_navbar.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

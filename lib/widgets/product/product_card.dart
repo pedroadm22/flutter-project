@@ -16,6 +16,9 @@ class ProductCard extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return InkWell(
       onTap: () {},
       borderRadius: BorderRadius.circular(20),
@@ -23,26 +26,21 @@ class ProductCard extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 12, left: 9, right: 9),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
+          color: colors.secondary,
           borderRadius: BorderRadius.circular(12),
-          border: BoxBorder.all(),
           boxShadow: [
+            // sombra principal (profundidade)
             BoxShadow(
-              color: Color.fromRGBO(204, 219, 232, 1),
-              blurRadius: 6,
-              spreadRadius: 0,
-              offset: Offset(3, 3),
+              color: Colors.black.withValues(alpha: isDark ? 0.6 : 0.2),
+              blurRadius: 12,
+              offset: const Offset(4, 4),
             ),
+
+            // luz suave (efeito elevado)
             BoxShadow(
-              color: Color.fromRGBO(255, 255, 255, 0.5),
-              blurRadius: 6,
-              spreadRadius: 1,
-              offset: Offset(-3, -3),
-            ),
-            BoxShadow(
-              color: Color.fromRGBO(255, 255, 255, 1),
-              blurRadius: 0,
-              spreadRadius: 0,
-              offset: Offset(0, 0),
+              color: Colors.white.withValues(alpha: isDark ? 0.05 : 0.7),
+              blurRadius: 8,
+              offset: const Offset(-2, -2),
             ),
           ],
         ),

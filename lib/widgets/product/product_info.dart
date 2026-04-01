@@ -12,6 +12,9 @@ class ProductInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -22,7 +25,7 @@ class ProductInfo extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold, 
             fontSize: 16,
-            color: Color(0xFF1C1C1C)
+            color: colors.onPrimary
             ),
         ),
         const SizedBox(height: 4),
