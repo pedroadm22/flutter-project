@@ -17,6 +17,8 @@ class ProductScreen extends StatelessWidget {
         slivers: [
           SliverAppBar(
             leading: SizedBox(
+              height: 100,
+              width:200,
               child: Image.asset(
                 'assets/images/logo_app_bar.png',
                 fit: BoxFit.contain,

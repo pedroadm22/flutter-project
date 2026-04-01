@@ -1,56 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app_ecommerce_kachau/widgets/custom_navbar.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      appBar: CustomAppBar(),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _buildHeader(width),
-          ],
-        ),
+        child: Column(children: [_buildHeader(width)]),
       ),
     );
   }
 
   Widget _buildHeader(double width) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: width * 0.04,
-        vertical: width * 0.05,
-      ),
-      decoration: BoxDecoration(
-        color: Colors.grey[200],
-        boxShadow: const [
-          BoxShadow(
-            color: Color.fromRGBO(50, 50, 93, 0.25),
-            blurRadius: 40,
-            spreadRadius: -10,
-            offset: Offset(0, 20),
+    return Column(
+      children: [
+        Container(
+          width: double.infinity,
+          padding: EdgeInsets.symmetric(
+            horizontal: width * 0.04,
+            vertical: width * 0.05,
           ),
-          BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.2),
-            blurRadius: 20,
-            spreadRadius: -10,
-            offset: Offset(0, 10),
+          decoration: BoxDecoration(
+            color: Colors.grey[200],
+            boxShadow: const [
+              BoxShadow(
+                color: Color.fromRGBO(50, 50, 93, 0.25),
+                blurRadius: 40,
+                spreadRadius: -10,
+                offset: Offset(0, 20),
+              ),
+              BoxShadow(
+                color: Color.fromRGBO(0, 0, 0, 0.2),
+                blurRadius: 20,
+                spreadRadius: -10,
+                offset: Offset(0, 10),
+              ),
+            ],
           ),
-        ],
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          _buildAvatar(width),
-          SizedBox(width: width * 0.04),
-          Expanded(child: _buildTexts(width)),
-        ],
-      ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _buildAvatar(width),
+              SizedBox(width: width * 0.04),
+              Expanded(child: _buildTexts(width)),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -62,10 +64,7 @@ class ProfilePage extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
         color: Colors.grey.withAlpha(100),
       ),
-      child: Icon(
-        Icons.person_rounded,
-        size: width * 0.12,
-      ),
+      child: Icon(Icons.person_rounded, size: width * 0.12),
     );
   }
 

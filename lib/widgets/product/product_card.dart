@@ -20,11 +20,31 @@ class ProductCard extends StatelessWidget {
       onTap: () {},
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        margin: const EdgeInsets.only(bottom: 12),
+        margin: const EdgeInsets.only(bottom: 12, left: 9, right: 9),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.grey[100]
+          borderRadius: BorderRadius.circular(12),
+          border: BoxBorder.all(),
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromRGBO(204, 219, 232, 1),
+              blurRadius: 6,
+              spreadRadius: 0,
+              offset: Offset(3, 3),
+            ),
+            BoxShadow(
+              color: Color.fromRGBO(255, 255, 255, 0.5),
+              blurRadius: 6,
+              spreadRadius: 1,
+              offset: Offset(-3, -3),
+            ),
+            BoxShadow(
+              color: Color.fromRGBO(255, 255, 255, 1),
+              blurRadius: 0,
+              spreadRadius: 0,
+              offset: Offset(0, 0),
+            ),
+          ],
         ),
 
         child: Expanded(
