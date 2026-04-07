@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_app_ecommerce_kachau/controllers/product_controller.dart';
 
 class ProfilePage extends StatelessWidget {
-  final CartController controller;
 
-  const ProfilePage({super.key, required this.controller});
+  const ProfilePage({super.key,});
 
   @override
   Widget build(BuildContext context) {

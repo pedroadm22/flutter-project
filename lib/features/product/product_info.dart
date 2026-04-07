@@ -5,9 +5,10 @@ import 'package:moeda_brasil/moeda_brasil.dart';
 class ProductInfo extends StatelessWidget {
   final String title;
   final double price;
+  final double cardPrice;
   final int parcelamentos = 10;
   
-  const ProductInfo({super.key, required this.title, required this.price});
+  const ProductInfo({super.key, required this.title, required this.price, required this.cardPrice});
 
   @override
   Widget build(BuildContext context) {
