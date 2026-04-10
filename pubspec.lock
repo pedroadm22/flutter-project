@@ -118,6 +118,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_custom_icons:
+    dependency: "direct main"
+    description:
+      name: flutter_custom_icons
+      sha256: b5b3ee418284898ed2c9c049b6a58abb24c55f3eb680d65012f87d47cfe2f0d6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   flutter_lints:
     dependency: "direct dev"
     description:
